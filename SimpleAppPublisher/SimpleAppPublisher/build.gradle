@@ -1,0 +1,24 @@
+/* this is fucking retarded
+
+
+apply plugin: 'war'
+
+
+
+dependencies {
+	providedCompile = fileTree('libs') 
+}
+
+war {
+
+	
+
+
+    from 'WebContent' // adds a file-set to the root of the archive
+    webInf { from 'src/main/java' } // adds a file-set to the WEB-INF dir.
+    //classpath fileTree('additionalLibs') // adds a file-set to the WEB-INF/lib dir.
+    //classpath configurations.moreLibs // adds a configuration to the WEB-INF/lib dir.
+    //webXml = file('src/someWeb.xml') // copies a file to WEB-INF/web.xml
+}
+
+*/

@@ -13,6 +13,8 @@ public class StatusServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		System.out.println("writing to STDOUT");
+		System.err.println("writing to STDERR");
 		
 		response.setContentType("text/html");
 	
