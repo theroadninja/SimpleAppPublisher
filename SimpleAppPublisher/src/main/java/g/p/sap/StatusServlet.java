@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 
 public class StatusServlet extends HttpServlet {
 
+	private static Config config = Config.getConfig();
+	
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -18,7 +20,16 @@ public class StatusServlet extends HttpServlet {
 		
 		response.setContentType("text/html");
 	
+		
+		
+		
+		
 		PrintWriter out = response.getWriter();
 		out.println("<h1>server is running</h1>");
+		
+		
+		
+		out.println("<p />config error: " + config.loadFailed());
+		out.println("<p />config a = " + config.get("a"));
 		}
 }
