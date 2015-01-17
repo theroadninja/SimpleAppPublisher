@@ -37,7 +37,11 @@
 
     <target name="compile">
         <mkdir dir="${classes-directory}"/>
-        <javac srcdir="${source-directory}" destdir="${classes-directory}"/>
+        <javac includeantruntime="false" srcdir="${source-directory}" destdir="${classes-directory}">
+            <classpath>
+                <fileset dir="libs" />
+            </classpath>
+        </javac>
     </target>
 
 </project>
