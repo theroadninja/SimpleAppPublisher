@@ -31,5 +31,7 @@ public class StatusServlet extends HttpServlet {
 		
 		out.println("<p />config error: " + config.loadFailed());
 		out.println("<p />config a = " + config.get("a"));
+		
+		out.println("<p />continuous deployment test 1");
 		}
 }
